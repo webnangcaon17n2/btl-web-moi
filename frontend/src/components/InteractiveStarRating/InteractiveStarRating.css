@@ -1,0 +1,26 @@
+.interactive-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+.interactive-rating__stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.interactive-rating__star {
+  color: #ddd;
+  transition: all 0.2s ease;
+}
+
+.interactive-rating__star:hover {
+  transform: scale(1.2);
+}
+
+.interactive-rating__star--filled {
+  color: #ffc107; /* Or var(--color-accent) depending on theme */
+}

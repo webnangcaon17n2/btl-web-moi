@@ -1,0 +1,140 @@
+.all-reviews-page {
+  min-height: 100vh;
+  background-color: #fcfdfb;
+}
+
+.reviews-hero {
+  padding: 80px 0 60px;
+  background: linear-gradient(to bottom, #f0f7f0, #fcfdfb);
+  text-align: center;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--color-accent);
+}
+
+.reviews-hero__title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  color: var(--color-text-dark);
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.reviews-hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.reviews-content {
+  padding-bottom: 100px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background: white;
+  padding: 35px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.review-card__stars {
+  display: flex;
+  gap: 4px;
+}
+
+.review-card__star {
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+.review-card__date {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.review-card__text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+  font-style: italic;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.review-card__author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.review-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.review-card__name {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.review-card__role {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.reviews-loading, .no-reviews {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 1.2rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reviews-hero {
+    padding: 60px 20px 40px;
+  }
+}

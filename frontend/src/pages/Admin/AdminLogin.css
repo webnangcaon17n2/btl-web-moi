@@ -1,0 +1,334 @@
+/* ============================================
+   ADMIN LOGIN PAGE - Light Theme
+   Matching user-facing site colors
+   ============================================ */
+
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  background: var(--color-bg, #f5f7f2);
+}
+
+/* ─── Left: Form Side ─── */
+.admin-login__form-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 64px;
+  max-width: 560px;
+  position: relative;
+}
+
+.admin-login__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 64px;
+  text-decoration: none;
+}
+
+.admin-login__logo-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-accent, #4caf50);
+}
+
+.admin-login__logo-text {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-dark, #1a1a1a);
+}
+
+.admin-login__logo-badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent, #4caf50);
+  display: block;
+  margin-top: -2px;
+}
+
+/* Form Wrapper */
+.admin-login__form-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Heading */
+.admin-login__heading {
+  margin-bottom: 32px;
+}
+
+.admin-login__title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--color-text-dark, #1a1a1a);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.admin-login__subtitle {
+  font-size: 15px;
+  color: var(--color-text-light, #888);
+  line-height: 1.5;
+}
+
+/* Form */
+.admin-login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-login__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-login__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-dark, #1a1a1a);
+}
+
+.admin-login__input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.admin-login__input-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--color-text-light, #888);
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.admin-login__field:focus-within .admin-login__input-icon {
+  color: var(--color-accent, #4caf50);
+}
+
+.admin-login__input {
+  width: 100%;
+  padding: 16px 48px 16px 48px;
+  background: var(--color-bg-card, #fff);
+  border: 1.5px solid var(--color-border, #e8e8e8);
+  border-radius: var(--radius-md, 12px);
+  font-size: 15px;
+  color: var(--color-text-dark, #1a1a1a);
+  transition: all 0.3s ease;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.admin-login__input::placeholder {
+  color: #b0b0b0;
+}
+
+.admin-login__input:focus {
+  border-color: var(--color-accent, #4caf50);
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1);
+}
+
+.admin-login__input:hover:not(:focus) {
+  border-color: #ccc;
+}
+
+.admin-login__toggle-pw {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--color-text-light, #888);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  border-radius: 6px;
+  transition: color 0.2s;
+}
+
+.admin-login__toggle-pw:hover {
+  color: var(--color-text-dark, #1a1a1a);
+}
+
+/* Error */
+.admin-login__error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #dc2626;
+  animation: admin-shake 0.4s ease;
+}
+
+@keyframes admin-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+/* Submit */
+.admin-login__submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--color-bg, #f5f7f2);
+  border: 1.5px solid var(--color-border, #e8e8e8);
+  border-radius: var(--radius-md, 12px);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-dark, #1a1a1a);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.admin-login__submit:hover {
+  background: var(--color-secondary, #c8f169);
+  border-color: var(--color-secondary, #c8f169);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(200, 241, 105, 0.35);
+}
+
+.admin-login__submit:active {
+  transform: translateY(0);
+}
+
+/* Switch */
+.admin-login__switch {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--color-text-light, #888);
+}
+
+.admin-login__switch a {
+  font-weight: 700;
+  color: var(--color-accent, #4caf50);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ─── Right: Decorative Side ─── */
+.admin-login__decor-side {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(
+    160deg,
+    #2d4a1e 0%,
+    #3a6b28 25%,
+    #4caf50 50%,
+    #66bb6a 75%,
+    #a5d6a7 100%
+  );
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl, 28px) 0 0 var(--radius-xl, 28px);
+}
+
+.admin-login__decor-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Concentric circles */
+.admin-login__circles {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login__circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  animation: admin-circle-expand 8s ease-in-out infinite;
+}
+
+.admin-login__circle--1 { width: 250px; height: 250px; border-color: rgba(255, 255, 255, 0.18); animation-delay: 0s; }
+.admin-login__circle--2 { width: 420px; height: 420px; border-color: rgba(255, 255, 255, 0.12); animation-delay: 1.5s; }
+.admin-login__circle--3 { width: 600px; height: 600px; border-color: rgba(255, 255, 255, 0.07); animation-delay: 3s; }
+
+@keyframes admin-circle-expand {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.06); opacity: 0.7; }
+}
+
+.admin-login__decor-icon {
+  position: relative;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: admin-float-icon 5s ease-in-out infinite;
+}
+
+@keyframes admin-float-icon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.admin-login__decor-text {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.admin-login__decor-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.admin-login__decor-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .admin-login {
+    flex-direction: column;
+  }
+  .admin-login__form-side {
+    max-width: 100%;
+    padding: 32px 24px;
+  }
+  .admin-login__decor-side {
+    display: none;
+  }
+  .admin-login__logo {
+    margin-bottom: 32px;
+  }
+}

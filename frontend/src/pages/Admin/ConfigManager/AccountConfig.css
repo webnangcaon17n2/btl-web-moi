@@ -1,0 +1,207 @@
+/* ============================================
+   ACCOUNT CONFIG - Styles
+   ============================================ */
+
+/* Section */
+.cfg-section {
+  animation: cfg-fade-in 0.3s ease;
+}
+
+@keyframes cfg-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cfg-section__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cfg-section__title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-dark, #1a1a1a);
+  margin-bottom: 4px;
+}
+
+.cfg-section__desc {
+  font-size: 13px;
+  color: var(--color-text-light, #888);
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+/* Toggle Button */
+.cfg-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1.5px solid var(--color-border, #e8e8e8);
+  border-radius: 20px;
+  background: var(--color-bg-card, #fff);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.cfg-toggle-btn--on {
+  color: var(--color-accent, #4caf50);
+  border-color: #c8e6c9;
+  background: var(--color-green-soft, #e8f5e9);
+}
+
+.cfg-toggle-btn--on:hover {
+  background: #dcedc8;
+}
+
+.cfg-toggle-btn--off {
+  color: #888;
+  border-color: var(--color-border, #e8e8e8);
+}
+
+.cfg-toggle-btn--off:hover {
+  color: #dc2626;
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+/* Permission badges */
+.cfg-perm-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #f0f4ff;
+  color: #3b82f6;
+}
+
+/* Permission Legend */
+.cfg-perm-legend {
+  margin-top: 20px;
+  background: var(--color-bg-card, #fff);
+  border: 1px solid var(--color-border-light, #f0f0f0);
+  border-radius: 18px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(0,0,0,0.06));
+}
+
+.cfg-perm-legend__title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-dark, #1a1a1a);
+  margin-bottom: 14px;
+}
+
+.cfg-perm-legend__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.cfg-perm-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--color-bg, #f5f7f2);
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--color-text, #555);
+  transition: all 0.15s;
+}
+
+.cfg-perm-legend__item:hover {
+  background: var(--color-green-soft, #e8f5e9);
+  color: var(--color-accent, #4caf50);
+}
+
+.cfg-perm-legend__item svg {
+  color: var(--color-accent, #4caf50);
+  flex-shrink: 0;
+}
+
+/* Permission Modal */
+.cfg-perm-info {
+  background: var(--color-bg, #f5f7f2);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+
+.cfg-perm-info__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.cfg-perm-info__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-light, #888);
+  min-width: 80px;
+}
+
+.cfg-perm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cfg-perm-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: background 0.15s;
+}
+
+.cfg-perm-item:hover {
+  background: var(--color-bg, #f5f7f2);
+}
+
+.cfg-perm-item__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cfg-perm-item__icon {
+  color: var(--color-text-light, #888);
+}
+
+.cfg-perm-item__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-dark, #1a1a1a);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cfg-section__header {
+    flex-direction: column;
+  }
+
+  .cfg-perm-legend__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cfg-perm-legend__grid {
+    grid-template-columns: 1fr;
+  }
+}

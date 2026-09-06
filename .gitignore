@@ -1,0 +1,11 @@
+node_modules/
+.env
+*.rar
+*.zip
+.DS_Store
+dist/
+build/
+database
+database2
+.expo/
+*.log
